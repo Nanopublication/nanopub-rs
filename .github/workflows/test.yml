@@ -123,6 +123,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HYPERFINE_VERSION: '1.20.0'
+      NANOPUB_JAVA_VERSION: '1.94.0'
       STABLE_PYTHON_VERSION: '3.12'
     steps:
     - uses: actions/checkout@v6
@@ -144,11 +145,8 @@ jobs:
     - name: Install java and python tools
       run: |
         pip install --upgrade nanopub
-        JAR_URL=$(curl -s https://api.github.com/repos/Nanopublication/nanopub-java/releases/latest \
-          | grep "browser_download_url" \
-          | grep "with-dependencies.jar" \
-          | cut -d '"' -f 4)
-        curl -Lo nanopub.jar "$JAR_URL"
+        # Pinned: from 1.95.0 `sign` queries the network to check the key, which would skew timings
+        curl -Lo nanopub.jar "https://github.com/Nanopublication/nanopub-java/releases/download/nanopub-${NANOPUB_JAVA_VERSION}/nanopub-${NANOPUB_JAVA_VERSION}-jar-with-dependencies.jar"
 
     - name: Build ourself
       run: cargo build --release
@@ -156,11 +154,11 @@ jobs:
     - name: Benchmark
       run: |
         hyperfine -m 100 --warmup 10 --export-markdown benchmark-simple.md \
-          'java -jar nanopub.jar sign lib/tests/resources/simple1-rsa.trig -k lib/tests/resources/id_rsa' \
+          'java -jar nanopub.jar sign lib/tests/resources/simple1-rsa.trig -k lib/tests/resources/id_rsa -s https://orcid.org/0000-0000-0000-0000' \
           'np sign lib/tests/resources/simple1-rsa.trig -k lib/tests/resources/id_rsa' \
           'target/release/nanopub-cli sign lib/tests/resources/simple1-rsa.trig -k lib/tests/resources/id_rsa'
         hyperfine -m 100 --warmup 10 --export-markdown benchmark-large.md \
-          'java -jar nanopub.jar sign lib/tests/resources/np-large.trig -k lib/tests/resources/id_rsa' \
+          'java -jar nanopub.jar sign lib/tests/resources/np-large.trig -k lib/tests/resources/id_rsa -s https://orcid.org/0000-0000-0000-0000' \
           'np sign lib/tests/resources/np-large.trig -k lib/tests/resources/id_rsa' \
           'target/release/nanopub-cli sign lib/tests/resources/np-large.trig -k lib/tests/resources/id_rsa'
 
