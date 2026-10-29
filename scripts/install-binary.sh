@@ -7,7 +7,7 @@ BINARY_NAME="np"
 # Destination directory
 DEST_DIR="/usr/local/bin"
 
-BASE_BINARY_URL="http://github.com/vemonet/nanopub-rs/releases/latest/download/nanopub_x86_64"
+BASE_BINARY_URL="http://github.com/Nanopublication/nanopub-rs/releases/latest/download/nanopub_x86_64"
 # Detect the platform (Linux or macOS)
 case "$(uname)" in
     "Linux")

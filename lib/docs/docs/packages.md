@@ -54,7 +54,7 @@ Install the package for you language:
 This process involves signing a Nanopublication RDF string using a specified RSA private key passed through the profile. The signing operation ensures that the Nanopub is authentically created by the holder of the private key.
 
 !!! success "Get a private key"
-    You can easily create and register a new private key on the [playground page](https://vemonet.github.io/nanopub-rs/playground.html) after login with your ORCID.
+    You can easily create and register a new private key on the [playground page](https://nanopublication.github.io/nanopub-rs/playground.html) after login with your ORCID.
 
 === "Python"
 
@@ -116,7 +116,7 @@ This process involves signing a Nanopublication RDF string using a specified RSA
 === "JavaScript"
 
     !!! example "Demo"
-        Visit the **[playground page](https://vemonet.github.io/nanopub-rs/playground.html)** to sign nanopubs, or generate and register a new key pair, directly in your browser using this NPM package. You can checkout the [`playground.html`](https://github.com/vemonet/nanopub-rs/blob/main/lib/docs/docs/playground.html) file as an example to use the package directly from HTML/JS.
+        Visit the **[playground page](https://nanopublication.github.io/nanopub-rs/playground.html)** to sign nanopubs, or generate and register a new key pair, directly in your browser using this NPM package. You can checkout the [`playground.html`](https://github.com/Nanopublication/nanopub-rs/blob/main/lib/docs/docs/playground.html) file as an example to use the package directly from HTML/JS.
 
     !!! info "Build a Nanopublication"
         This package takes an already prepared Nanopublication RDF string as input. If you want to easily display nanopubs checkout the [`@nanopub/display`](https://nanopublication.github.io/nanopub-js/modules/_nanopub_display.html) package, if you want to fetch and manipulate nanopubs check the [`@nanopub/utils`](https://nanopublication.github.io/nanopub-js/modules/ _nanopub_utils.html) package.

@@ -22,11 +22,11 @@ requires-python = ">=3.8, <3.13"
 dynamic = ["version"]
 
 [project.urls]
-Changelog = "https://github.com/vemonet/nanopub-rs/blob/main/CHANGELOG.md"
-Documentation = "https://vemonet.github.io/nanopub-rs"
-Homepage = "https://vemonet.github.io/nanopub-rs"
-Source = "https://github.com/vemonet/nanopub-rs/tree/main/python"
-Tracker = "https://github.com/vemonet/nanopub-rs/issues"
+Changelog = "https://github.com/Nanopublication/nanopub-rs/blob/main/CHANGELOG.md"
+Documentation = "https://nanopublication.github.io/nanopub-rs"
+Homepage = "https://nanopublication.github.io/nanopub-rs"
+Source = "https://github.com/Nanopublication/nanopub-rs/tree/main/python"
+Tracker = "https://github.com/Nanopublication/nanopub-rs/issues"
 
 [tool.maturin]
 features = ["pyo3/generate-import-lib"] # needed for Windows aarch64

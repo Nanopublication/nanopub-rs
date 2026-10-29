@@ -2,7 +2,7 @@
 // #![warn(missing_docs)]
 // #![doc(html_favicon_url = "https://raw.github.com/MaastrichtU-IDS/knowledge-collaboratory/main/frontend/app/assets/icon.png")]
 // #![doc(html_logo_url = "https://raw.github.com/MaastrichtU-IDS/knowledge-collaboratory/main/frontend/app/assets/icon.png")]
-// #![doc(issue_tracker_base_url = "https://github.com/vemonet/nanopub-rs/issues/")]
+// #![doc(issue_tracker_base_url = "https://github.com/Nanopublication/nanopub-rs/issues/")]
 // #![ no_implicit_prelude ]
 
 // #![doc = include_str!("../docs/docs/rust.md")]

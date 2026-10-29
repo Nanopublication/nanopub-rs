@@ -4,7 +4,7 @@ This page presents the project architecture and some technical details.
 
 ## 🏔️ Changelog
 
-Version history is recorded in the [CHANGELOG.md](https://github.com/vemonet/nanopub-rs/blob/main/CHANGELOG.md).
+Version history is recorded in the [CHANGELOG.md](https://github.com/Nanopublication/nanopub-rs/blob/main/CHANGELOG.md).
 
 ## 🗃️ Folder structure
 

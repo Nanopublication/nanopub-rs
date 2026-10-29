@@ -1,9 +1,9 @@
 site_name: Nanopub cross-platform toolkit
 site_description: A cross-platform toolkit to sign and publish Nanopublications, written in Rust with bindings to Python and JS (wasm)
 site_author: Vincent Emonet
-site_url: https://vemonet.github.io/nanopub-rs
-repo_name: vemonet/nanopub-rs
-repo_url: https://github.com/vemonet/nanopub-rs
+site_url: https://nanopublication.github.io/nanopub-rs
+repo_name: Nanopublication/nanopub-rs
+repo_url: https://github.com/Nanopublication/nanopub-rs
 edit_uri: "edit/main/docs/"
 copyright: Copyright &copy; 2023 Vincent Emonet
 
@@ -21,7 +21,7 @@ nav:
       - Architecture details: architecture.md
       - Contributing: contributing.md
   - Playground: playground.html" target="_blank
-  # - Issues: https://github.com/vemonet/nanopub-rs/issues" target="_blank
+  # - Issues: https://github.com/Nanopublication/nanopub-rs/issues" target="_blank
 
 theme:
   name: "material"
@@ -120,7 +120,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/Nanopublication
     # - icon: fontawesome/brands/docker
-    #   link: https://github.com/vemonet/nanopub-rs/pkgs/container/nanopub-rs
+    #   link: https://github.com/Nanopublication/nanopub-rs/pkgs/container/nanopub-rs
 
 watch:
   - ../src

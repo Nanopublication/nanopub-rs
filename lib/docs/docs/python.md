@@ -21,7 +21,7 @@ pip install nanopub-sign
 This process involves signing a Nanopublication RDF string using a specified RSA private key passed through the profile. The signing operation ensures that the Nanopub is authentically created by the holder of the private key.
 
 !!! success "Get a private key"
-    You can easily create and register a new private key on the [playground page](https://vemonet.github.io/nanopub-rs/playground.html) after login with your ORCID.
+    You can easily create and register a new private key on the [playground page](https://nanopublication.github.io/nanopub-rs/playground.html) after login with your ORCID.
 
 ```python title="sign.py"
 from nanopub_sign import Nanopub, NpProfile

@@ -28,7 +28,7 @@ biohackathon_url:   "https://biohackathon-europe.org/"
 biohackathon_location: "Barcelona, Spain, 2023"
 group: Project 35
 # URL to project git repo --- should contain the actual paper.md:
-git_url: https://github.com/vemonet/nanopub-rs
+git_url: https://github.com/Nanopublication/nanopub-rs
 # This is the short authors description that is used at the
 # bottom of the generated paper (typically the first two authors):
 authors_short: Vincent Emonet, Shashank Chakravarthy
@@ -92,7 +92,7 @@ Our journey with Rust was an enlightening experience, revealing that the learnin
 
 # GitHub repositories
 
-* https://github.com/vemonet/nanopub-rs
+* https://github.com/Nanopublication/nanopub-rs
 
 # Acknowledgements
 We would like to particularly acknowledge Thomas Pellissier Tanon who inspired us to pursue this project thanks to his Oxigraph triplestore implementation in Rust.

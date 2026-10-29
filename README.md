@@ -15,23 +15,23 @@
 </p>
 
 <p align="center">
-    <a href="https://github.com/vemonet/nanopub-rs/actions/workflows/test.yml">
-        <img alt="Test" src="https://github.com/vemonet/nanopub-rs/actions/workflows/test.yml/badge.svg" />
+    <a href="https://github.com/Nanopublication/nanopub-rs/actions/workflows/test.yml">
+        <img alt="Test" src="https://github.com/Nanopublication/nanopub-rs/actions/workflows/test.yml/badge.svg" />
     </a>
-    <a href="https://github.com/vemonet/nanopub-rs/actions/workflows/build.yml">
-        <img alt="Build" src="https://github.com/vemonet/nanopub-rs/actions/workflows/build.yml/badge.svg" />
+    <a href="https://github.com/Nanopublication/nanopub-rs/actions/workflows/build.yml">
+        <img alt="Build" src="https://github.com/Nanopublication/nanopub-rs/actions/workflows/build.yml/badge.svg" />
     </a>
     <a href="https://docs.rs/nanopub">
         <img alt="crates" src="https://docs.rs/nanopub/badge.svg" />
     </a>
-    <a href="https://deps.rs/repo/github/vemonet/nanopub-rs">
-        <img src="https://deps.rs/repo/github/vemonet/nanopub-rs/status.svg" alt="Dependency status" />
+    <a href="https://deps.rs/repo/github/nanopublication/nanopub-rs">
+        <img src="https://deps.rs/repo/github/nanopublication/nanopub-rs/status.svg" alt="Dependency status" />
     </a>
-    <a href="https://github.com/vemonet/nanopub-rs/blob/main/LICENSE">
+    <a href="https://github.com/Nanopublication/nanopub-rs/blob/main/LICENSE">
         <img alt="MIT license" src="https://img.shields.io/badge/License-MIT-brightgreen.svg" />
     </a>
-    <a href="https://codecov.io/gh/vemonet/nanopub-rs/branch/main">
-        <img src="https://codecov.io/gh/vemonet/nanopub-rs/branch/main/graph/badge.svg" alt="Codecov status" />
+    <a href="https://codecov.io/gh/Nanopublication/nanopub-rs/branch/main">
+        <img src="https://codecov.io/gh/Nanopublication/nanopub-rs/branch/main/graph/badge.svg" alt="Codecov status" />
     </a>
 </p>
 
@@ -53,8 +53,8 @@ On all platforms:
 
 ## 📖 Documentation
 
-Checkout the **[documentation website](https://vemonet.github.io/nanopub-rs)** for more details on how to install and use it.
+Checkout the **[documentation website](https://nanopublication.github.io/nanopub-rs)** for more details on how to install and use it.
 
 ## 🏔️ Changelog
 
-Version history is recorded in the [CHANGELOG.md](https://github.com/vemonet/nanopub-rs/blob/main/CHANGELOG.md).
+Version history is recorded in the [CHANGELOG.md](https://github.com/Nanopublication/nanopub-rs/blob/main/CHANGELOG.md).

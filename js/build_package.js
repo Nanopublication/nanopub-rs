@@ -1,6 +1,6 @@
 #! /usr/bin/env node
 
-// From https://github.com/vemonet/nanopub-rs/blob/main/js/build_package.js
+// From https://github.com/Nanopublication/nanopub-rs/blob/main/js/build_package.js
 const fs = require("fs");
 
 // We copy file to the new directory
@@ -34,15 +34,15 @@ pkg.exports = {
 };
 pkg.unpkg = "web.js";
 pkg.files = ["*.{js,wasm,d.ts}"];
-pkg.homepage = "https://github.com/vemonet/nanopub-rs/tree/main/js";
+pkg.homepage = "https://github.com/Nanopublication/nanopub-rs/tree/main/js";
 pkg.license = "MIT";
 pkg.bugs = {
-    url: "https://github.com/vemonet/nanopub-rs/issues",
+    url: "https://github.com/Nanopublication/nanopub-rs/issues",
 };
 pkg.collaborators = undefined;
 pkg.repository = {
     type: "git",
-    url: "git+https://github.com/vemonet/nanopub-rs.git",
+    url: "git+https://github.com/Nanopublication/nanopub-rs.git",
     directory: "js",
 };
 fs.writeFileSync("./pkg/package.json", JSON.stringify(pkg, null, 2));

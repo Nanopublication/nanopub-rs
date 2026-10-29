@@ -3,8 +3,8 @@
 [![crates.io](https://img.shields.io/crates/v/nanopub.svg)](https://crates.io/crates/nanopub)
 [![PyPI](https://img.shields.io/pypi/v/nanopub-sign)](https://pypi.org/project/nanopub-sign/)
 [![npm](https://img.shields.io/npm/v/@nanopub/sign)](https://www.npmjs.com/package/@nanopub/sign)
-[![Tests](https://github.com/vemonet/nanopub-rs/actions/workflows/test.yml/badge.svg)](https://github.com/vemonet/nanopub-rs/actions/workflows/test.yml)
-[![Build](https://github.com/vemonet/nanopub-rs/actions/workflows/build.yml/badge.svg)](https://github.com/vemonet/nanopub-rs/actions/workflows/build.yml)
+[![Tests](https://github.com/Nanopublication/nanopub-rs/actions/workflows/test.yml/badge.svg)](https://github.com/Nanopublication/nanopub-rs/actions/workflows/test.yml)
+[![Build](https://github.com/Nanopublication/nanopub-rs/actions/workflows/build.yml/badge.svg)](https://github.com/Nanopublication/nanopub-rs/actions/workflows/build.yml)
 
 This project aims to provide a comprehensive cross-platform toolkit to sign, publish, and verify **[Nanopublications](https://nanopub.net)**.
 
@@ -52,4 +52,4 @@ When you sign a nanopub some metadata is added, if it has not already been defin
 
 Experience `nanopub-rs` in action! Visit the **[playground page](playground.html)** to sign Nanopublications, or generate and register a new key pair, directly in your browser using the NPM version of this library.
 
-> **💡 Facing a bug or have suggestions?** We welcome your input and feedback! If you encounter any issues or have ideas to enhance this tool, please [create an issue](https://github.com/vemonet/nanopub-rs/issues) on our GitHub repository.
+> **💡 Facing a bug or have suggestions?** We welcome your input and feedback! If you encounter any issues or have ideas to enhance this tool, please [create an issue](https://github.com/Nanopublication/nanopub-rs/issues) on our GitHub repository.

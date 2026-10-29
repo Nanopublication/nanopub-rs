@@ -1,11 +1,11 @@
 # 🛠️ Contributing
 
-[![Build](https://github.com/vemonet/nanopub-rs/actions/workflows/build.yml/badge.svg)](https://github.com/vemonet/nanopub-rs/actions/workflows/build.yml) [![Lint and Test](https://github.com/vemonet/nanopub-rs/actions/workflows/test.yml/badge.svg)](https://github.com/vemonet/nanopub-rs/actions/workflows/test.yml) [![codecov](https://codecov.io/gh/vemonet/nanopub-rs/graph/badge.svg?token=BF15PSO6GN)](https://codecov.io/gh/vemonet/nanopub-rs) [![dependency status](https://deps.rs/repo/github/vemonet/nanopub-rs/status.svg)](https://deps.rs/repo/github/vemonet/nanopub-rs)
+[![Build](https://github.com/Nanopublication/nanopub-rs/actions/workflows/build.yml/badge.svg)](https://github.com/Nanopublication/nanopub-rs/actions/workflows/build.yml) [![Lint and Test](https://github.com/Nanopublication/nanopub-rs/actions/workflows/test.yml/badge.svg)](https://github.com/Nanopublication/nanopub-rs/actions/workflows/test.yml) [![codecov](https://codecov.io/gh/Nanopublication/nanopub-rs/graph/badge.svg?token=BF15PSO6GN)](https://codecov.io/gh/Nanopublication/nanopub-rs) [![dependency status](https://deps.rs/repo/github/nanopublication/nanopub-rs/status.svg)](https://deps.rs/repo/github/nanopublication/nanopub-rs)
 
 The usual process to make a contribution is to:
 
-1. Check for existing related [issues on GitHub](https://github.com/vemonet/nanopub-rs/issues)
-2. [Fork](https://github.com/vemonet/nanopub-rs/fork) the repository and create a new branch
+1. Check for existing related [issues on GitHub](https://github.com/Nanopublication/nanopub-rs/issues)
+2. [Fork](https://github.com/Nanopublication/nanopub-rs/fork) the repository and create a new branch
 3. Make your changes
 4. Make sure formatting, linting and tests passes.
 5. Add tests if possible to cover the lines you added.
@@ -16,7 +16,7 @@ The usual process to make a contribution is to:
 Clone the `nanopub-rs` repository, and `cd` into it:
 
 ```bash
-git clone https://github.com/vemonet/nanopub-rs.git
+git clone https://github.com/Nanopublication/nanopub-rs.git
 cd nanopub-rs
 ```
 
@@ -169,7 +169,7 @@ cargo outdated
 
 !!! warning "Publisher tokens"
 
-    Building and publishing artifacts will be done by the [`build.yml`](https://github.com/vemonet/nanopub-rs/actions/workflows/build.yml) GitHub actions workflow, make sure you have set the following tokens as secrets for this repository: `PYPI_TOKEN`, `CRATES_IO_TOKEN`, `CODECOV_TOKEN`. As well as properly configured the [trusted publisher on npm](https://www.npmjs.com/package/@nanopub/sign/access).
+    Building and publishing artifacts will be done by the [`build.yml`](https://github.com/Nanopublication/nanopub-rs/actions/workflows/build.yml) GitHub actions workflow, make sure you have set the following tokens as secrets for this repository: `PYPI_TOKEN`, `CRATES_IO_TOKEN`, `CODECOV_TOKEN`. As well as properly configured the [trusted publisher on npm](https://www.npmjs.com/package/@nanopub/sign/access).
 
 Dry run:
 

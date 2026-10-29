@@ -3,7 +3,7 @@
   "name": "@nanopub/sign",
   "description": "JavaScript bindings for the Nanopub toolkit written in Rust",
   "license": "MIT",
-  "homepage": "https://github.com/vemonet/nanopub-rs",
+  "homepage": "https://github.com/Nanopublication/nanopub-rs",
   "module": "web.js",
   "types": "web.d.ts",
   "collaborators": [
@@ -11,7 +11,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vemonet/nanopub-rs.git"
+    "url": "git+https://github.com/Nanopublication/nanopub-rs.git"
   },
   "files": [
     "*.{js,wasm,d.ts}"

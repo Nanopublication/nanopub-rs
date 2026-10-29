@@ -2,424 +2,424 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.2.0](https://github.com/vemonet/nanopub-rs/compare/v0.1.10..0.2.0) - 2026-02-24
+## [0.2.0](https://github.com/Nanopublication/nanopub-rs/compare/v0.1.10..0.2.0) - 2026-02-24
 
 ### ⛰️ Features
 
-- Introduce `dataset.quads_match()` to oxrdf `Dataset` to enable cleaner matching of quads - ([9a4ee78](https://github.com/vemonet/nanopub-rs/commit/9a4ee784c36d9cbbef9e9ecd090da110431f39a3))
-- Order the quads before serialization to have a smaller and more readable trig, improve variable names - ([bda77b9](https://github.com/vemonet/nanopub-rs/commit/bda77b9e11a149d8132b71a9ea9783be24c90311))
+- Introduce `dataset.quads_match()` to oxrdf `Dataset` to enable cleaner matching of quads - ([9a4ee78](https://github.com/Nanopublication/nanopub-rs/commit/9a4ee784c36d9cbbef9e9ecd090da110431f39a3))
+- Order the quads before serialization to have a smaller and more readable trig, improve variable names - ([bda77b9](https://github.com/Nanopublication/nanopub-rs/commit/bda77b9e11a149d8132b71a9ea9783be24c90311))
 
 ### 🐛 Bug Fixes
 
-- Use `rand` crate instead of `rand_core`, and add wasm_js feature for getrandom 0.3 to fix issues with wasm compilation (0.3 is required by reqwest and some dependencies, 0.2 required by the `rsa` and `ring` crates). Improve error message when no profile.yml file found. Run fmt - ([66bfadf](https://github.com/vemonet/nanopub-rs/commit/66bfadfdf347d41454639defa781453419676681))
+- Use `rand` crate instead of `rand_core`, and add wasm_js feature for getrandom 0.3 to fix issues with wasm compilation (0.3 is required by reqwest and some dependencies, 0.2 required by the `rsa` and `ring` crates). Improve error message when no profile.yml file found. Run fmt - ([66bfadf](https://github.com/Nanopublication/nanopub-rs/commit/66bfadfdf347d41454639defa781453419676681))
 
 ### 📚 Documentation
 
-- Fix docs to import `web.js` since `bundler.js` does not work well on client, improve exports in package.json - ([4089bb9](https://github.com/vemonet/nanopub-rs/commit/4089bb94503f48c1ea7d0d2b116541f07e7fff26))
+- Fix docs to import `web.js` since `bundler.js` does not work well on client, improve exports in package.json - ([4089bb9](https://github.com/Nanopublication/nanopub-rs/commit/4089bb94503f48c1ea7d0d2b116541f07e7fff26))
 
 ### 🚜 Refactor
 
-- Improve nodes matching in `sign.rs` to use `match quad.object` instead of `.is_named_node`/`.is_blank_node`, remove `object_literal_to_strings`, `object_blank_to_str`, `object_iri_to_string` - ([bf524c8](https://github.com/vemonet/nanopub-rs/commit/bf524c8ce2baa0656944c3f49f66561baadfbcd5))
-- Simplify error message in `subject_iri_to_string` and `graph_iri_to_string`, and remove now unused `DatasetExt.quads_match` - ([a69e760](https://github.com/vemonet/nanopub-rs/commit/a69e760d9b9a917ab02ca3c272c21a8b796eec42))
-- Remove `:` prefix from serializer (nanopubs usually use just this and sub), rename `_graph_view` variables to `_graph` - ([c389259](https://github.com/vemonet/nanopub-rs/commit/c3892593c4869e8791aaf505f52bd4618d65a5e8))
-- Rename variable - ([fc63ba0](https://github.com/vemonet/nanopub-rs/commit/fc63ba018106ca46ae25afd2f55ccf74ec248ce2))
-- Run fmt, and remove empty string prefix from prefixes used for serialization (this triggers the definition of a base iri) - ([f3ae110](https://github.com/vemonet/nanopub-rs/commit/f3ae11039697476296f78b286ae0df12c99a1e8a))
-- Improve the `Namespace` struct - ([0d4c387](https://github.com/vemonet/nanopub-rs/commit/0d4c38729755bd45d8231ccbc55a64b808c4f8e2))
+- Improve nodes matching in `sign.rs` to use `match quad.object` instead of `.is_named_node`/`.is_blank_node`, remove `object_literal_to_strings`, `object_blank_to_str`, `object_iri_to_string` - ([bf524c8](https://github.com/Nanopublication/nanopub-rs/commit/bf524c8ce2baa0656944c3f49f66561baadfbcd5))
+- Simplify error message in `subject_iri_to_string` and `graph_iri_to_string`, and remove now unused `DatasetExt.quads_match` - ([a69e760](https://github.com/Nanopublication/nanopub-rs/commit/a69e760d9b9a917ab02ca3c272c21a8b796eec42))
+- Remove `:` prefix from serializer (nanopubs usually use just this and sub), rename `_graph_view` variables to `_graph` - ([c389259](https://github.com/Nanopublication/nanopub-rs/commit/c3892593c4869e8791aaf505f52bd4618d65a5e8))
+- Rename variable - ([fc63ba0](https://github.com/Nanopublication/nanopub-rs/commit/fc63ba018106ca46ae25afd2f55ccf74ec248ce2))
+- Run fmt, and remove empty string prefix from prefixes used for serialization (this triggers the definition of a base iri) - ([f3ae110](https://github.com/Nanopublication/nanopub-rs/commit/f3ae11039697476296f78b286ae0df12c99a1e8a))
+- Improve the `Namespace` struct - ([0d4c387](https://github.com/Nanopublication/nanopub-rs/commit/0d4c38729755bd45d8231ccbc55a64b808c4f8e2))
 
 ### 🛠️ Miscellaneous Tasks
 
-- Update `release.sh` script and revert unwanted changes to signed.nanopub_test_blank.trig - ([eee9ffb](https://github.com/vemonet/nanopub-rs/commit/eee9ffbaf4912e4b1afd023c030226144510bcbe))
-- Improve `quads_match` method and add doctest for it - ([f0ae226](https://github.com/vemonet/nanopub-rs/commit/f0ae2263d6fd70c76ea17d3460961a4e151698d7))
-- Resolve clippy warnings and run fmt - ([538af1b](https://github.com/vemonet/nanopub-rs/commit/538af1b39385d333d42ca942625a0d5821017fe8))
-- Remove `with_base_iri` from serializer to keep older serialization format, add large nanopub with ~1k triples for benchmarking - ([fe01ce0](https://github.com/vemonet/nanopub-rs/commit/fe01ce01bc55d568b5710a51328f0180709e6b63))
-- Improve how iri/bnode match is handled in sign.rs `replace_bnode`, remove `subject_blank_to_str` and `predicate_iri_to_string` - ([8451e24](https://github.com/vemonet/nanopub-rs/commit/8451e24f2839e58ca02a9f745a18157ff75a03b6))
+- Update `release.sh` script and revert unwanted changes to signed.nanopub_test_blank.trig - ([eee9ffb](https://github.com/Nanopublication/nanopub-rs/commit/eee9ffbaf4912e4b1afd023c030226144510bcbe))
+- Improve `quads_match` method and add doctest for it - ([f0ae226](https://github.com/Nanopublication/nanopub-rs/commit/f0ae2263d6fd70c76ea17d3460961a4e151698d7))
+- Resolve clippy warnings and run fmt - ([538af1b](https://github.com/Nanopublication/nanopub-rs/commit/538af1b39385d333d42ca942625a0d5821017fe8))
+- Remove `with_base_iri` from serializer to keep older serialization format, add large nanopub with ~1k triples for benchmarking - ([fe01ce0](https://github.com/Nanopublication/nanopub-rs/commit/fe01ce01bc55d568b5710a51328f0180709e6b63))
+- Improve how iri/bnode match is handled in sign.rs `replace_bnode`, remove `subject_blank_to_str` and `predicate_iri_to_string` - ([8451e24](https://github.com/Nanopublication/nanopub-rs/commit/8451e24f2839e58ca02a9f745a18157ff75a03b6))
 
 ### 🧪 Testing
 
-- Run benchmark on small and large nanopubs in the test workflow - ([07e79e6](https://github.com/vemonet/nanopub-rs/commit/07e79e6c57509081a6de0375146220a7b202ea77))
-- Regenerate signed nanopubs used in testing with proper test private key and prefixes - ([ee1fec8](https://github.com/vemonet/nanopub-rs/commit/ee1fec86628f1db8e083935fec586c3339e9fa13))
+- Run benchmark on small and large nanopubs in the test workflow - ([07e79e6](https://github.com/Nanopublication/nanopub-rs/commit/07e79e6c57509081a6de0375146220a7b202ea77))
+- Regenerate signed nanopubs used in testing with proper test private key and prefixes - ([ee1fec8](https://github.com/Nanopublication/nanopub-rs/commit/ee1fec86628f1db8e083935fec586c3339e9fa13))
 
-## [0.1.10](https://github.com/vemonet/nanopub-rs/compare/v0.1.9..v0.1.10) - 2025-12-18
+## [0.1.10](https://github.com/Nanopublication/nanopub-rs/compare/v0.1.9..v0.1.10) - 2025-12-18
 
 ### ⚙️ Continuous Integration
 
-- Fix npm trusted publishing through gh workflow - ([23776bc](https://github.com/vemonet/nanopub-rs/commit/23776bc32f64d6155663ccad7683eff892308952))
+- Fix npm trusted publishing through gh workflow - ([23776bc](https://github.com/Nanopublication/nanopub-rs/commit/23776bc32f64d6155663ccad7683eff892308952))
 
 ### 🛠️ Miscellaneous Tasks
 
-- Bump version to 0.1.10 - ([ad7bcc0](https://github.com/vemonet/nanopub-rs/commit/ad7bcc0ca2f033da4464630034b537ef3e742363))
+- Bump version to 0.1.10 - ([ad7bcc0](https://github.com/Nanopublication/nanopub-rs/commit/ad7bcc0ca2f033da4464630034b537ef3e742363))
 
-## [0.1.9](https://github.com/vemonet/nanopub-rs/compare/v0.1.8..v0.1.9) - 2025-12-18
+## [0.1.9](https://github.com/Nanopublication/nanopub-rs/compare/v0.1.8..v0.1.9) - 2025-12-18
 
 ### ⚙️ Continuous Integration
 
-- Try to fix broken npm trusted publisher workflow - ([bdb5edc](https://github.com/vemonet/nanopub-rs/commit/bdb5edcaefda2ade1e178fa9d2a98cd954e0c28a))
+- Try to fix broken npm trusted publisher workflow - ([bdb5edc](https://github.com/Nanopublication/nanopub-rs/commit/bdb5edcaefda2ade1e178fa9d2a98cd954e0c28a))
 
 ### 🛠️ Miscellaneous Tasks
 
-- Bump version to 0.1.9 - ([404c63c](https://github.com/vemonet/nanopub-rs/commit/404c63c61d147bd0f09d1997c2c4ecbaaf853f28))
+- Bump version to 0.1.9 - ([404c63c](https://github.com/Nanopublication/nanopub-rs/commit/404c63c61d147bd0f09d1997c2c4ecbaaf853f28))
 
-## [0.1.8](https://github.com/vemonet/nanopub-rs/compare/v0.1.7..v0.1.8) - 2025-12-18
+## [0.1.8](https://github.com/Nanopublication/nanopub-rs/compare/v0.1.7..v0.1.8) - 2025-12-18
 
 ### ⚙️ Continuous Integration
 
-- Fix permissions in build workflow and improve release docs - ([3b21463](https://github.com/vemonet/nanopub-rs/commit/3b2146372ec0ff12eab52eb49e0913cb4da05d7a))
+- Fix permissions in build workflow and improve release docs - ([3b21463](https://github.com/Nanopublication/nanopub-rs/commit/3b2146372ec0ff12eab52eb49e0913cb4da05d7a))
 
 ### 🛠️ Miscellaneous Tasks
 
-- Bump version to 0.1.8 - ([738d4c4](https://github.com/vemonet/nanopub-rs/commit/738d4c4dbe0da03f96feee741b3ebe13e7356acb))
+- Bump version to 0.1.8 - ([738d4c4](https://github.com/Nanopublication/nanopub-rs/commit/738d4c4dbe0da03f96feee741b3ebe13e7356acb))
 
-## [0.1.7](https://github.com/vemonet/nanopub-rs/compare/v0.1.6..v0.1.7) - 2025-12-18
+## [0.1.7](https://github.com/Nanopublication/nanopub-rs/compare/v0.1.6..v0.1.7) - 2025-12-18
 
 ### ⚙️ Continuous Integration
 
-- Update release process to use cargo-release and move cliff config in `Cargo.toml` file, put back npm publish in `build.yml` workflow using OIDC trusted publisher - ([b96ba30](https://github.com/vemonet/nanopub-rs/commit/b96ba308014c4953ffb51a70410df187c26e0ffc))
+- Update release process to use cargo-release and move cliff config in `Cargo.toml` file, put back npm publish in `build.yml` workflow using OIDC trusted publisher - ([b96ba30](https://github.com/Nanopublication/nanopub-rs/commit/b96ba308014c4953ffb51a70410df187c26e0ffc))
 
 ### 🐛 Bug Fixes
 
-- Improve handling of wrong namespace to avoid `.unwrap()` panics - ([4e81ab7](https://github.com/vemonet/nanopub-rs/commit/4e81ab79608822deed8f6181b78a3c1acfe596eb))
+- Improve handling of wrong namespace to avoid `.unwrap()` panics - ([4e81ab7](https://github.com/Nanopublication/nanopub-rs/commit/4e81ab79608822deed8f6181b78a3c1acfe596eb))
 
 ### 🛠️ Miscellaneous Tasks
 
-- Bump version to 0.1.7 - ([c7515a3](https://github.com/vemonet/nanopub-rs/commit/c7515a36e08e60c4b2d6ad13b4478e929ba5cd1d))
+- Bump version to 0.1.7 - ([c7515a3](https://github.com/Nanopublication/nanopub-rs/commit/c7515a36e08e60c4b2d6ad13b4478e929ba5cd1d))
 
-## [0.1.6](https://github.com/vemonet/nanopub-rs/compare/v0.1.5..v0.1.6) - 2025-12-17
+## [0.1.6](https://github.com/Nanopublication/nanopub-rs/compare/v0.1.5..v0.1.6) - 2025-12-17
 
 ### ⚙️ Continuous Integration
 
-- Update script to ddl latest nanopub jar version in benchmark run, fixes https://github.com/vemonet/nanopub-rs/issues/19 - ([c8d7b10](https://github.com/vemonet/nanopub-rs/commit/c8d7b10adec54233d99cdeaf219700f9e4f7f82e))
-- Move npm publish out of CI - ([23b1058](https://github.com/vemonet/nanopub-rs/commit/23b105869ee5241a79826394ea92a930794e7334))
-- Update release process to use cargo-release - ([40f474a](https://github.com/vemonet/nanopub-rs/commit/40f474a59df5cb9259b15412a383ff86b9d1b8e7))
-- Fix cargo release config - ([458def5](https://github.com/vemonet/nanopub-rs/commit/458def595755a55aec3a203d88a27650c09a1a04))
-- Put back old school release script without cargo-release - ([5695885](https://github.com/vemonet/nanopub-rs/commit/5695885d5e6d38ac96e6d236b9402377d7b4237e))
+- Update script to ddl latest nanopub jar version in benchmark run, fixes https://github.com/Nanopublication/nanopub-rs/issues/19 - ([c8d7b10](https://github.com/Nanopublication/nanopub-rs/commit/c8d7b10adec54233d99cdeaf219700f9e4f7f82e))
+- Move npm publish out of CI - ([23b1058](https://github.com/Nanopublication/nanopub-rs/commit/23b105869ee5241a79826394ea92a930794e7334))
+- Update release process to use cargo-release - ([40f474a](https://github.com/Nanopublication/nanopub-rs/commit/40f474a59df5cb9259b15412a383ff86b9d1b8e7))
+- Fix cargo release config - ([458def5](https://github.com/Nanopublication/nanopub-rs/commit/458def595755a55aec3a203d88a27650c09a1a04))
+- Put back old school release script without cargo-release - ([5695885](https://github.com/Nanopublication/nanopub-rs/commit/5695885d5e6d38ac96e6d236b9402377d7b4237e))
 
 ### ⛰️ Features
 
-- [**breaking**] Now using `/` instead of `#` as ending separator for the trusty namespace when signing a nanopub - ([fce8dc7](https://github.com/vemonet/nanopub-rs/commit/fce8dc7c9cc3bb7d3d2d710a1b3b48f7b40c6e27))
+- [**breaking**] Now using `/` instead of `#` as ending separator for the trusty namespace when signing a nanopub - ([fce8dc7](https://github.com/Nanopublication/nanopub-rs/commit/fce8dc7c9cc3bb7d3d2d710a1b3b48f7b40c6e27))
 
 ### 🐛 Bug Fixes
 
-- Fix cargo categories - ([4c1ae0e](https://github.com/vemonet/nanopub-rs/commit/4c1ae0ed69ac243683a7bd9a971af96c46cefb50))
-- Improve how private/public keys are parsed using built-in pem parsers from rsa crate - ([bb33cba](https://github.com/vemonet/nanopub-rs/commit/bb33cbafbb136c07ab9fc3c75ff737b932f3345c))
-- Fix benchmark in workflow - ([84f0691](https://github.com/vemonet/nanopub-rs/commit/84f06916d087297a950471ed2f481912b65287d9))
+- Fix cargo categories - ([4c1ae0e](https://github.com/Nanopublication/nanopub-rs/commit/4c1ae0ed69ac243683a7bd9a971af96c46cefb50))
+- Improve how private/public keys are parsed using built-in pem parsers from rsa crate - ([bb33cba](https://github.com/Nanopublication/nanopub-rs/commit/bb33cbafbb136c07ab9fc3c75ff737b932f3345c))
+- Fix benchmark in workflow - ([84f0691](https://github.com/Nanopublication/nanopub-rs/commit/84f06916d087297a950471ed2f481912b65287d9))
 
 ### 🚜 Refactor
 
-- Fix warnings - ([4737c9b](https://github.com/vemonet/nanopub-rs/commit/4737c9b9b5e60f60e19d4073c79f77c30049aa78))
+- Fix warnings - ([4737c9b](https://github.com/Nanopublication/nanopub-rs/commit/4737c9b9b5e60f60e19d4073c79f77c30049aa78))
 
 ### 🛠️ Miscellaneous Tasks
 
-- Bump version to 0.1.6 - ([97d4a87](https://github.com/vemonet/nanopub-rs/commit/97d4a8758fce49e809340c610211ef1002ccb2ba))
+- Bump version to 0.1.6 - ([97d4a87](https://github.com/Nanopublication/nanopub-rs/commit/97d4a8758fce49e809340c610211ef1002ccb2ba))
 
-## [0.1.5](https://github.com/vemonet/nanopub-rs/compare/v0.1.4..v0.1.5) - 2025-11-11
+## [0.1.5](https://github.com/Nanopublication/nanopub-rs/compare/v0.1.4..v0.1.5) - 2025-11-11
 
 ### Bug
 
-- Fix version in pyproject.toml to make it dynamic - ([4b6cb36](https://github.com/vemonet/nanopub-rs/commit/4b6cb36d7f21f1d6ee05c39c6468e80d6bd3258b))
+- Fix version in pyproject.toml to make it dynamic - ([4b6cb36](https://github.com/Nanopublication/nanopub-rs/commit/4b6cb36d7f21f1d6ee05c39c6468e80d6bd3258b))
 
 ### ⚙️ Continuous Integration
 
-- Improve python test and release script - ([8d0660c](https://github.com/vemonet/nanopub-rs/commit/8d0660cca829eb54a9243da3dd985b69db033cfc))
-- Use windows-11-arm github action container to build wheel for win aarch64 - ([d324b6b](https://github.com/vemonet/nanopub-rs/commit/d324b6bf134c95ede2c37c8b7025c19ee363a4bb))
-- Use `python-architecture: arm64` for win aarch64 wheel build - ([224eb4e](https://github.com/vemonet/nanopub-rs/commit/224eb4e170343d7b0b851fff58ab64a9cf5249db))
-- Fix release script for macOS - ([08aef03](https://github.com/vemonet/nanopub-rs/commit/08aef0370018f9a24524a669e2f7e2c942f3ca54))
-- Add cargo.lock to release script - ([37e67f2](https://github.com/vemonet/nanopub-rs/commit/37e67f288b747f6e5bdc988cb6457971d433ca7d))
-- Cargo update after changing version in release script - ([fcd1097](https://github.com/vemonet/nanopub-rs/commit/fcd1097de9dbce1616a48600e8d2fb879fab87e9))
+- Improve python test and release script - ([8d0660c](https://github.com/Nanopublication/nanopub-rs/commit/8d0660cca829eb54a9243da3dd985b69db033cfc))
+- Use windows-11-arm github action container to build wheel for win aarch64 - ([d324b6b](https://github.com/Nanopublication/nanopub-rs/commit/d324b6bf134c95ede2c37c8b7025c19ee363a4bb))
+- Use `python-architecture: arm64` for win aarch64 wheel build - ([224eb4e](https://github.com/Nanopublication/nanopub-rs/commit/224eb4e170343d7b0b851fff58ab64a9cf5249db))
+- Fix release script for macOS - ([08aef03](https://github.com/Nanopublication/nanopub-rs/commit/08aef0370018f9a24524a669e2f7e2c942f3ca54))
+- Add cargo.lock to release script - ([37e67f2](https://github.com/Nanopublication/nanopub-rs/commit/37e67f288b747f6e5bdc988cb6457971d433ca7d))
+- Cargo update after changing version in release script - ([fcd1097](https://github.com/Nanopublication/nanopub-rs/commit/fcd1097de9dbce1616a48600e8d2fb879fab87e9))
 
 ### ⛰️ Features
 
-- When publishing a nanopub through the CLI we now print the nanopub URI after it has been published, fixes https://github.com/vemonet/nanopub-rs/issues/16 - ([0a253c6](https://github.com/vemonet/nanopub-rs/commit/0a253c6f1233e92b50569b0f7dfb60aa062a6766))
-- Upgrade the list of servers to use the new generation nanopubs registry instead of old nanopub servers - ([5916b76](https://github.com/vemonet/nanopub-rs/commit/5916b76b5f7653e74bca67fc36653fd7fa7c49fc))
-- Replace old test server with new test registry - ([b8d946f](https://github.com/vemonet/nanopub-rs/commit/b8d946f9d4a9a80a2182b0acae79421822eecca5))
-- Add bundler (esm) target for npm package - ([a49abe0](https://github.com/vemonet/nanopub-rs/commit/a49abe00e111b5e39b0bb87851b694cfe30a2f05))
+- When publishing a nanopub through the CLI we now print the nanopub URI after it has been published, fixes https://github.com/Nanopublication/nanopub-rs/issues/16 - ([0a253c6](https://github.com/Nanopublication/nanopub-rs/commit/0a253c6f1233e92b50569b0f7dfb60aa062a6766))
+- Upgrade the list of servers to use the new generation nanopubs registry instead of old nanopub servers - ([5916b76](https://github.com/Nanopublication/nanopub-rs/commit/5916b76b5f7653e74bca67fc36653fd7fa7c49fc))
+- Replace old test server with new test registry - ([b8d946f](https://github.com/Nanopublication/nanopub-rs/commit/b8d946f9d4a9a80a2182b0acae79421822eecca5))
+- Add bundler (esm) target for npm package - ([a49abe0](https://github.com/Nanopublication/nanopub-rs/commit/a49abe00e111b5e39b0bb87851b694cfe30a2f05))
 
 ### 🐛 Bug Fixes
 
-- Fix orcid widget - ([0d1ffe6](https://github.com/vemonet/nanopub-rs/commit/0d1ffe65353b59077ac5920596c0f7fcdf4a318d))
-- Fix orcid widget - ([4eb29b6](https://github.com/vemonet/nanopub-rs/commit/4eb29b6700fe54021716dd6cf891a54f572b7fb6))
-- Improve handling of keys generated by OpenSSH. Now when instantiating profile from file we generate the public key from the private key instead of reading it from the file - ([4554f14](https://github.com/vemonet/nanopub-rs/commit/4554f14541096769cb3c686e12bf5e8c29717109))
-- Fix pypy and python version in build workflow - ([ff622dd](https://github.com/vemonet/nanopub-rs/commit/ff622dd1d8bbd426439e3aa84b0a806e4708e5b8))
-- Duplicate LICENSE file to fix maturin build now failing to read a file in a parent folder https://github.com/PyO3/maturin/issues/2743 - ([31394c6](https://github.com/vemonet/nanopub-rs/commit/31394c620321e76ba05e7194f34e17afbd8817bc))
+- Fix orcid widget - ([0d1ffe6](https://github.com/Nanopublication/nanopub-rs/commit/0d1ffe65353b59077ac5920596c0f7fcdf4a318d))
+- Fix orcid widget - ([4eb29b6](https://github.com/Nanopublication/nanopub-rs/commit/4eb29b6700fe54021716dd6cf891a54f572b7fb6))
+- Improve handling of keys generated by OpenSSH. Now when instantiating profile from file we generate the public key from the private key instead of reading it from the file - ([4554f14](https://github.com/Nanopublication/nanopub-rs/commit/4554f14541096769cb3c686e12bf5e8c29717109))
+- Fix pypy and python version in build workflow - ([ff622dd](https://github.com/Nanopublication/nanopub-rs/commit/ff622dd1d8bbd426439e3aa84b0a806e4708e5b8))
+- Duplicate LICENSE file to fix maturin build now failing to read a file in a parent folder https://github.com/PyO3/maturin/issues/2743 - ([31394c6](https://github.com/Nanopublication/nanopub-rs/commit/31394c620321e76ba05e7194f34e17afbd8817bc))
 
 ### 📚 Documentation
 
-- Fix abbreviations - ([b47f2f4](https://github.com/vemonet/nanopub-rs/commit/b47f2f455b78fa2d4f07005931d8019374920c50))
+- Fix abbreviations - ([b47f2f4](https://github.com/Nanopublication/nanopub-rs/commit/b47f2f455b78fa2d4f07005931d8019374920c50))
 
 ### 🛠️ Miscellaneous Tasks
 
-- Update docs website, upgrade dependencies, migrate to uv to run python tests and mkdocs - ([df63a36](https://github.com/vemonet/nanopub-rs/commit/df63a36b093ee2f3b8f71ac953a92cd3348070ff))
-- Upgrade pre-commit hooks - ([a4a64bb](https://github.com/vemonet/nanopub-rs/commit/a4a64bbb221e24a69131e43dec6b2611a2149a6f))
+- Update docs website, upgrade dependencies, migrate to uv to run python tests and mkdocs - ([df63a36](https://github.com/Nanopublication/nanopub-rs/commit/df63a36b093ee2f3b8f71ac953a92cd3348070ff))
+- Upgrade pre-commit hooks - ([a4a64bb](https://github.com/Nanopublication/nanopub-rs/commit/a4a64bbb221e24a69131e43dec6b2611a2149a6f))
 - Chore: improve pyo3 functions signatures
-fix: Fix issues with pyo3 signature, and fix playground.html import - ([23a52bf](https://github.com/vemonet/nanopub-rs/commit/23a52bf24567baba4a722b4036a7c9de4bcf8428))
-- Upgrade pyo3 dependency hoping it will fix windows aarch64 wheel build and commit Cargo.lock - ([c5b85de](https://github.com/vemonet/nanopub-rs/commit/c5b85de9171ef4859ec38acd324811a6d8a86bde))
-- Bump version to 0.1.5 - ([ebf9c16](https://github.com/vemonet/nanopub-rs/commit/ebf9c16181ff130fc30552ea0b21837b4dd13e6b))
+fix: Fix issues with pyo3 signature, and fix playground.html import - ([23a52bf](https://github.com/Nanopublication/nanopub-rs/commit/23a52bf24567baba4a722b4036a7c9de4bcf8428))
+- Upgrade pyo3 dependency hoping it will fix windows aarch64 wheel build and commit Cargo.lock - ([c5b85de](https://github.com/Nanopublication/nanopub-rs/commit/c5b85de9171ef4859ec38acd324811a6d8a86bde))
+- Bump version to 0.1.5 - ([ebf9c16](https://github.com/Nanopublication/nanopub-rs/commit/ebf9c16181ff130fc30552ea0b21837b4dd13e6b))
 
-## [0.1.4](https://github.com/vemonet/nanopub-rs/compare/v0.1.3..v0.1.4) - 2024-05-30
+## [0.1.4](https://github.com/Nanopublication/nanopub-rs/compare/v0.1.3..v0.1.4) - 2024-05-30
 
 ### ⛰️ Features
 
-- [**breaking**] Update the `NpProfile` struct to make ORCID and name optional, and use the builder pattern to build a profile. Remove dependency on serde_yaml (YAML profile file parsed manually) - ([c3e30fa](https://github.com/vemonet/nanopub-rs/commit/c3e30fa250dfd3a9cdfe67dd71735a15ee6bf48a))
+- [**breaking**] Update the `NpProfile` struct to make ORCID and name optional, and use the builder pattern to build a profile. Remove dependency on serde_yaml (YAML profile file parsed manually) - ([c3e30fa](https://github.com/Nanopublication/nanopub-rs/commit/c3e30fa250dfd3a9cdfe67dd71735a15ee6bf48a))
 
 ### 🐛 Bug Fixes
 
-- Fix python build in workflow - ([90a6a83](https://github.com/vemonet/nanopub-rs/commit/90a6a836527c99607e22d9718d5f2f04669ac47a))
+- Fix python build in workflow - ([90a6a83](https://github.com/Nanopublication/nanopub-rs/commit/90a6a836527c99607e22d9718d5f2f04669ac47a))
 
 ### 📚 Documentation
 
-- Small improvements - ([6b0c599](https://github.com/vemonet/nanopub-rs/commit/6b0c599f1f9d303266c37c722e24abcbcef1ff8b))
+- Small improvements - ([6b0c599](https://github.com/Nanopublication/nanopub-rs/commit/6b0c599f1f9d303266c37c722e24abcbcef1ff8b))
 
 ### 🛠️ Miscellaneous Tasks
 
-- Improve dependency setup - ([09a5e08](https://github.com/vemonet/nanopub-rs/commit/09a5e086591be4b064c977b34b39c8701bc6b940))
-- Bump version to 0.1.4 - ([f7889fb](https://github.com/vemonet/nanopub-rs/commit/f7889fb97352775ed9231e4bb14e76bd60a0e05a))
+- Improve dependency setup - ([09a5e08](https://github.com/Nanopublication/nanopub-rs/commit/09a5e086591be4b064c977b34b39c8701bc6b940))
+- Bump version to 0.1.4 - ([f7889fb](https://github.com/Nanopublication/nanopub-rs/commit/f7889fb97352775ed9231e4bb14e76bd60a0e05a))
 
 ### 🧪 Testing
 
-- Improve JS tests to test profile with default args - ([44bc7e6](https://github.com/vemonet/nanopub-rs/commit/44bc7e61d97f61658652a33fe55d6ad8bb81f0b8))
+- Improve JS tests to test profile with default args - ([44bc7e6](https://github.com/Nanopublication/nanopub-rs/commit/44bc7e61d97f61658652a33fe55d6ad8bb81f0b8))
 
-## [0.1.3](https://github.com/vemonet/nanopub-rs/compare/v0.1.2..v0.1.3) - 2024-03-31
+## [0.1.3](https://github.com/Nanopublication/nanopub-rs/compare/v0.1.2..v0.1.3) - 2024-03-31
 
 ### ⚙️ Continuous Integration
 
-- Improve build process to use a matrix and add binary for windows aarch64 - ([ab8f3ba](https://github.com/vemonet/nanopub-rs/commit/ab8f3baecee5b7d542761f3ffab02b0124bf1d6c))
-- Fix aarch64 binary builds - ([888c734](https://github.com/vemonet/nanopub-rs/commit/888c73443707dca018674aca269d99ab0dd37031))
-- Fix linux aarch64 build - ([24e8fc5](https://github.com/vemonet/nanopub-rs/commit/24e8fc56e3e5e062108c5a6dc78d3d09c15a9530))
+- Improve build process to use a matrix and add binary for windows aarch64 - ([ab8f3ba](https://github.com/Nanopublication/nanopub-rs/commit/ab8f3baecee5b7d542761f3ffab02b0124bf1d6c))
+- Fix aarch64 binary builds - ([888c734](https://github.com/Nanopublication/nanopub-rs/commit/888c73443707dca018674aca269d99ab0dd37031))
+- Fix linux aarch64 build - ([24e8fc5](https://github.com/Nanopublication/nanopub-rs/commit/24e8fc56e3e5e062108c5a6dc78d3d09c15a9530))
 
 ### 🐛 Bug Fixes
 
-- Fix wheel building on windows aarch64 - ([a7ef4a5](https://github.com/vemonet/nanopub-rs/commit/a7ef4a570c9fe38ff7d29f88af0194d137e43049))
-- Add content type header to nanopub server request (fix error when running test with jest and nodejs). Add env variable to try fix build on aarch64 - ([c464e63](https://github.com/vemonet/nanopub-rs/commit/c464e63abe0f30f34a27d9b99d94972411d9ae48))
+- Fix wheel building on windows aarch64 - ([a7ef4a5](https://github.com/Nanopublication/nanopub-rs/commit/a7ef4a570c9fe38ff7d29f88af0194d137e43049))
+- Add content type header to nanopub server request (fix error when running test with jest and nodejs). Add env variable to try fix build on aarch64 - ([c464e63](https://github.com/Nanopublication/nanopub-rs/commit/c464e63abe0f30f34a27d9b99d94972411d9ae48))
 
 ### 📚 Documentation
 
-- Improve error msg display in playground page - ([dfa0d44](https://github.com/vemonet/nanopub-rs/commit/dfa0d443e0442758d73c773f2d58c1a06c035242))
-- Add loader icon for editor - ([a13b4fb](https://github.com/vemonet/nanopub-rs/commit/a13b4fb2ec7599660dae8b07238c26be3bca6ea9))
+- Improve error msg display in playground page - ([dfa0d44](https://github.com/Nanopublication/nanopub-rs/commit/dfa0d443e0442758d73c773f2d58c1a06c035242))
+- Add loader icon for editor - ([a13b4fb](https://github.com/Nanopublication/nanopub-rs/commit/a13b4fb2ec7599660dae8b07238c26be3bca6ea9))
 
 ### 🚜 Refactor
 
-- Creating a new intro nanopub now fails if the ORCID or name of the introduced Profile are empty - ([2a7fae5](https://github.com/vemonet/nanopub-rs/commit/2a7fae51c161c4eb888e71bb49d82793d06a3af2))
+- Creating a new intro nanopub now fails if the ORCID or name of the introduced Profile are empty - ([2a7fae5](https://github.com/Nanopublication/nanopub-rs/commit/2a7fae51c161c4eb888e71bb49d82793d06a3af2))
 
 ### 🛠️ Miscellaneous Tasks
 
-- Improve the list of prefixes used when building thenanopub, using https://schema.org/ instead of http://schema.org/ - ([b534f7f](https://github.com/vemonet/nanopub-rs/commit/b534f7f038fa20f8882684d965b2f9bad8204014))
-- Upgrade reqwest to 0.12 - ([a9f3eaa](https://github.com/vemonet/nanopub-rs/commit/a9f3eaa0ea36ba0a9022011b2e516caec99f6299))
-- Use rust-toolchain.toml for components - ([2a380c8](https://github.com/vemonet/nanopub-rs/commit/2a380c85085728d8a53190c6ee8866fd03d38703))
-- Bump version to 0.1.3 - ([0cc3a18](https://github.com/vemonet/nanopub-rs/commit/0cc3a18e272fed9c4438c7b9b656f9a421b10336))
+- Improve the list of prefixes used when building thenanopub, using https://schema.org/ instead of http://schema.org/ - ([b534f7f](https://github.com/Nanopublication/nanopub-rs/commit/b534f7f038fa20f8882684d965b2f9bad8204014))
+- Upgrade reqwest to 0.12 - ([a9f3eaa](https://github.com/Nanopublication/nanopub-rs/commit/a9f3eaa0ea36ba0a9022011b2e516caec99f6299))
+- Use rust-toolchain.toml for components - ([2a380c8](https://github.com/Nanopublication/nanopub-rs/commit/2a380c85085728d8a53190c6ee8866fd03d38703))
+- Bump version to 0.1.3 - ([0cc3a18](https://github.com/Nanopublication/nanopub-rs/commit/0cc3a18e272fed9c4438c7b9b656f9a421b10336))
 
 ### 🧪 Testing
 
-- Test with reqwest native-tls - ([5cae658](https://github.com/vemonet/nanopub-rs/commit/5cae658d3afc37fbca2b0441c0d464c375d135b0))
+- Test with reqwest native-tls - ([5cae658](https://github.com/Nanopublication/nanopub-rs/commit/5cae658d3afc37fbca2b0441c0d464c375d135b0))
 
-## [0.1.2](https://github.com/vemonet/nanopub-rs/compare/v0.1.1..v0.1.2) - 2024-03-07
+## [0.1.2](https://github.com/Nanopublication/nanopub-rs/compare/v0.1.1..v0.1.2) - 2024-03-07
 
 ### ⚙️ Continuous Integration
 
-- Improve wheel building in build workflow, use the maturin gh action inspired from pydantic2 - ([d26d008](https://github.com/vemonet/nanopub-rs/commit/d26d008ef73abbabc0b540ec3e778e11460f6d2d))
-- Fix wheel working dir - ([e3e0f30](https://github.com/vemonet/nanopub-rs/commit/e3e0f30bdc321034f47121a5e6e03b9eff682339))
+- Improve wheel building in build workflow, use the maturin gh action inspired from pydantic2 - ([d26d008](https://github.com/Nanopublication/nanopub-rs/commit/d26d008ef73abbabc0b540ec3e778e11460f6d2d))
+- Fix wheel working dir - ([e3e0f30](https://github.com/Nanopublication/nanopub-rs/commit/e3e0f30bdc321034f47121a5e6e03b9eff682339))
 
 ### 🚜 Refactor
 
-- Rename get_rdf() function to rdf() - ([bb28299](https://github.com/vemonet/nanopub-rs/commit/bb282990662ae0fdb284c6e005f6bab58d329cf6))
+- Rename get_rdf() function to rdf() - ([bb28299](https://github.com/Nanopublication/nanopub-rs/commit/bb282990662ae0fdb284c6e005f6bab58d329cf6))
 
 ### 🛠️ Miscellaneous Tasks
 
-- Bump version to 0.1.2 - ([85d2bde](https://github.com/vemonet/nanopub-rs/commit/85d2bdef310e0d378a307d2dacf0dc6d8b1e4002))
+- Bump version to 0.1.2 - ([85d2bde](https://github.com/Nanopublication/nanopub-rs/commit/85d2bdef310e0d378a307d2dacf0dc6d8b1e4002))
 
-## [0.1.1](https://github.com/vemonet/nanopub-rs/compare/v0.1.0..v0.1.1) - 2024-03-06
+## [0.1.1](https://github.com/Nanopublication/nanopub-rs/compare/v0.1.0..v0.1.1) - 2024-03-06
 
 ### ⛰️ Features
 
-- Add python bindings for generating private/public `KeyPair` and static method `Nanopub.publish_intro()` to publish an introduction - ([d02ef65](https://github.com/vemonet/nanopub-rs/commit/d02ef652e33d3d48a0ea70f11c912234b2442a4d))
+- Add python bindings for generating private/public `KeyPair` and static method `Nanopub.publish_intro()` to publish an introduction - ([d02ef65](https://github.com/Nanopublication/nanopub-rs/commit/d02ef652e33d3d48a0ea70f11c912234b2442a4d))
 
 ### 🐛 Bug Fixes
 
-- Fix tokio dev dependency for when runninv cov tests - ([de2a109](https://github.com/vemonet/nanopub-rs/commit/de2a1097979e4e8e8d76f6aeff2193d6238c14d7))
+- Fix tokio dev dependency for when runninv cov tests - ([de2a109](https://github.com/Nanopublication/nanopub-rs/commit/de2a1097979e4e8e8d76f6aeff2193d6238c14d7))
 
 ### 📚 Documentation
 
-- Migrate docs from mdbook to material for mkdocs - ([d2785dc](https://github.com/vemonet/nanopub-rs/commit/d2785dc327be5bf875ca8c279a66f0f0d04bf12b))
-- Add service worker to playground to speed up loading assets - ([e2f6bfc](https://github.com/vemonet/nanopub-rs/commit/e2f6bfc108da52af7afd2a0d7234e214e26c6107))
+- Migrate docs from mdbook to material for mkdocs - ([d2785dc](https://github.com/Nanopublication/nanopub-rs/commit/d2785dc327be5bf875ca8c279a66f0f0d04bf12b))
+- Add service worker to playground to speed up loading assets - ([e2f6bfc](https://github.com/Nanopublication/nanopub-rs/commit/e2f6bfc108da52af7afd2a0d7234e214e26c6107))
 
 ### 🛠️ Miscellaneous Tasks
 
-- Bump version to 0.1.1 - ([b2ff457](https://github.com/vemonet/nanopub-rs/commit/b2ff4579880f524e08f12cf3bd3af94ed391c45e))
+- Bump version to 0.1.1 - ([b2ff457](https://github.com/Nanopublication/nanopub-rs/commit/b2ff4579880f524e08f12cf3bd3af94ed391c45e))
 
-## [0.1.0](https://github.com/vemonet/nanopub-rs/compare/v0.0.18..v0.1.0) - 2024-03-04
+## [0.1.0](https://github.com/Nanopublication/nanopub-rs/compare/v0.0.18..v0.1.0) - 2024-03-04
 
 ### ⚙️ Continuous Integration
 
-- Fix test workflow, add cargo deny - ([d618203](https://github.com/vemonet/nanopub-rs/commit/d618203c7ba74c636ff97ec407c90aa62a1732bc))
-- Add git cliff to generate changelog - ([69d5de9](https://github.com/vemonet/nanopub-rs/commit/69d5de97f288db9daeade7c5115861d1bd59fc63))
-- Fix release script - ([bfbc7ac](https://github.com/vemonet/nanopub-rs/commit/bfbc7ac15712af618674922c5e73598904ffad66))
+- Fix test workflow, add cargo deny - ([d618203](https://github.com/Nanopublication/nanopub-rs/commit/d618203c7ba74c636ff97ec407c90aa62a1732bc))
+- Add git cliff to generate changelog - ([69d5de9](https://github.com/Nanopublication/nanopub-rs/commit/69d5de97f288db9daeade7c5115861d1bd59fc63))
+- Fix release script - ([bfbc7ac](https://github.com/Nanopublication/nanopub-rs/commit/bfbc7ac15712af618674922c5e73598904ffad66))
 
 ### ⛰️ Features
 
-- Now supports null for profile and string in JS np.publish(). Related to https://github.com/vemonet/nanopub-rs/issues/4 - ([63093e4](https://github.com/vemonet/nanopub-rs/commit/63093e4c89b4b0eb18b9836c425121b03d50bd24))
-- Add support for re-signing already signed Nanopubs. Related to https://github.com/vemonet/nanopub-rs/issues/4 - ([e8a37d9](https://github.com/vemonet/nanopub-rs/commit/e8a37d932496198b5c546b651ca0b101831f3362))
-- Add fetch static function to JS bindings - ([c5635da](https://github.com/vemonet/nanopub-rs/commit/c5635dabc9b9a997d1e2fa52cc55ec4416cf7212))
-- [**breaking**] Change the python API to use instantiated Nanopub objects instead of static functions on the Nanopub class to check/sign/publish - ([9e34dda](https://github.com/vemonet/nanopub-rs/commit/9e34dda7eb46e2ec431665e54943fd6860b78ecc))
+- Now supports null for profile and string in JS np.publish(). Related to https://github.com/Nanopublication/nanopub-rs/issues/4 - ([63093e4](https://github.com/Nanopublication/nanopub-rs/commit/63093e4c89b4b0eb18b9836c425121b03d50bd24))
+- Add support for re-signing already signed Nanopubs. Related to https://github.com/Nanopublication/nanopub-rs/issues/4 - ([e8a37d9](https://github.com/Nanopublication/nanopub-rs/commit/e8a37d932496198b5c546b651ca0b101831f3362))
+- Add fetch static function to JS bindings - ([c5635da](https://github.com/Nanopublication/nanopub-rs/commit/c5635dabc9b9a997d1e2fa52cc55ec4416cf7212))
+- [**breaking**] Change the python API to use instantiated Nanopub objects instead of static functions on the Nanopub class to check/sign/publish - ([9e34dda](https://github.com/Nanopublication/nanopub-rs/commit/9e34dda7eb46e2ec431665e54943fd6860b78ecc))
 
 ### 🐛 Bug Fixes
 
-- Fix handling of published URI - ([2840850](https://github.com/vemonet/nanopub-rs/commit/284085011a053a0f4cd8fdf2be2bf623bf9e6f56))
+- Fix handling of published URI - ([2840850](https://github.com/Nanopublication/nanopub-rs/commit/284085011a053a0f4cd8fdf2be2bf623bf9e6f56))
 
 ### 📚 Documentation
 
-- Fix rust codeblocks in docs - ([2c82215](https://github.com/vemonet/nanopub-rs/commit/2c8221521e5541a453471db313c630ff83b2ced4))
+- Fix rust codeblocks in docs - ([2c82215](https://github.com/Nanopublication/nanopub-rs/commit/2c8221521e5541a453471db313c630ff83b2ced4))
 
 ### 🛠️ Miscellaneous Tasks
 
-- Delete bump.sh script, now replaced by release.sh - ([0f72924](https://github.com/vemonet/nanopub-rs/commit/0f729249967d97a7518b34867b7c6da516001c5f))
-- Cleanup dev dependencies for python build - ([2aff338](https://github.com/vemonet/nanopub-rs/commit/2aff338047afaaffa951ce1af68775d1660b8669))
-- Bump version to 0.1.0 - ([7841e1d](https://github.com/vemonet/nanopub-rs/commit/7841e1d05fba9be19451abf473a4b6eecd06d0a9))
+- Delete bump.sh script, now replaced by release.sh - ([0f72924](https://github.com/Nanopublication/nanopub-rs/commit/0f729249967d97a7518b34867b7c6da516001c5f))
+- Cleanup dev dependencies for python build - ([2aff338](https://github.com/Nanopublication/nanopub-rs/commit/2aff338047afaaffa951ce1af68775d1660b8669))
+- Bump version to 0.1.0 - ([7841e1d](https://github.com/Nanopublication/nanopub-rs/commit/7841e1d05fba9be19451abf473a4b6eecd06d0a9))
 
 ### 🧪 Testing
 
-- Add tests for python and JS with pytest and jest. Update some gh actions versions - ([fdca2f7](https://github.com/vemonet/nanopub-rs/commit/fdca2f73d834b7b42fb57255c2a1a8805a515ef2))
+- Add tests for python and JS with pytest and jest. Update some gh actions versions - ([fdca2f7](https://github.com/Nanopublication/nanopub-rs/commit/fdca2f73d834b7b42fb57255c2a1a8805a515ef2))
 
-## [0.0.18](https://github.com/vemonet/nanopub-rs/compare/v0.0.17..v0.0.18) - 2024-02-01
+## [0.0.18](https://github.com/Nanopublication/nanopub-rs/compare/v0.0.17..v0.0.18) - 2024-02-01
 
-## [0.0.17](https://github.com/vemonet/nanopub-rs/compare/v0.0.16..v0.0.17) - 2024-01-30
-
-### 🐛 Bug Fixes
-
-- Fix issue with keypair in demo - ([0f6d0bc](https://github.com/vemonet/nanopub-rs/commit/0f6d0bc92ac9e84faa1336e06a5720d750a96c9b))
-- Fix docs - ([b77cbe4](https://github.com/vemonet/nanopub-rs/commit/b77cbe4b898e965d221e9c566b1297793af29ef8))
-- Fix rsa crate version - ([62cabd2](https://github.com/vemonet/nanopub-rs/commit/62cabd2ce681a1cbc1f2daa9ce09edcbc331ba84))
-- Fix nanopub java ddl in workflow - ([9d7568a](https://github.com/vemonet/nanopub-rs/commit/9d7568af1ddf645f28ea6b9b361ccf01a4fe68e4))
-
-## [0.0.16](https://github.com/vemonet/nanopub-rs/compare/v0.0.15..v0.0.16) - 2023-12-01
+## [0.0.17](https://github.com/Nanopublication/nanopub-rs/compare/v0.0.16..v0.0.17) - 2024-01-30
 
 ### 🐛 Bug Fixes
 
-- Fix docs examples - ([08150af](https://github.com/vemonet/nanopub-rs/commit/08150af5ad7d26e61b7b5c70aa15a229ac76a6e6))
-- Fix print - ([898b41d](https://github.com/vemonet/nanopub-rs/commit/898b41dd68334e879b85ab7dfe6bd9f759301b6a))
-- Fix docs - ([f87a372](https://github.com/vemonet/nanopub-rs/commit/f87a372638e0337dd0fcdf4a0ca29dff1893231a))
+- Fix issue with keypair in demo - ([0f6d0bc](https://github.com/Nanopublication/nanopub-rs/commit/0f6d0bc92ac9e84faa1336e06a5720d750a96c9b))
+- Fix docs - ([b77cbe4](https://github.com/Nanopublication/nanopub-rs/commit/b77cbe4b898e965d221e9c566b1297793af29ef8))
+- Fix rsa crate version - ([62cabd2](https://github.com/Nanopublication/nanopub-rs/commit/62cabd2ce681a1cbc1f2daa9ce09edcbc331ba84))
+- Fix nanopub java ddl in workflow - ([9d7568a](https://github.com/Nanopublication/nanopub-rs/commit/9d7568af1ddf645f28ea6b9b361ccf01a4fe68e4))
 
-## [0.0.15](https://github.com/vemonet/nanopub-rs/compare/v0.0.14..v0.0.15) - 2023-11-29
-
-### 🐛 Bug Fixes
-
-- Fix orcid init - ([8c72842](https://github.com/vemonet/nanopub-rs/commit/8c72842f03ae06f3fde2914184e99f2983fefcda))
-- Fix main np server URL - ([229cde6](https://github.com/vemonet/nanopub-rs/commit/229cde6a751c887bfa411070ff4bcd7b894e00a9))
-- Fix tests - ([e2b2866](https://github.com/vemonet/nanopub-rs/commit/e2b2866ea16f49ff6b1109f420070e00e75c49f5))
-
-## [0.0.14](https://github.com/vemonet/nanopub-rs/compare/v0.0.13..v0.0.14) - 2023-11-29
+## [0.0.16](https://github.com/Nanopublication/nanopub-rs/compare/v0.0.15..v0.0.16) - 2023-12-01
 
 ### 🐛 Bug Fixes
 
-- Fix tests - ([6c2feb8](https://github.com/vemonet/nanopub-rs/commit/6c2feb8818bb8db1edc5da80d01540011576f8b2))
+- Fix docs examples - ([08150af](https://github.com/Nanopublication/nanopub-rs/commit/08150af5ad7d26e61b7b5c70aa15a229ac76a6e6))
+- Fix print - ([898b41d](https://github.com/Nanopublication/nanopub-rs/commit/898b41dd68334e879b85ab7dfe6bd9f759301b6a))
+- Fix docs - ([f87a372](https://github.com/Nanopublication/nanopub-rs/commit/f87a372638e0337dd0fcdf4a0ca29dff1893231a))
 
-## [0.0.13](https://github.com/vemonet/nanopub-rs/compare/v0.0.12..v0.0.13) - 2023-11-27
-
-## [0.0.12](https://github.com/vemonet/nanopub-rs/compare/v0.0.11..v0.0.12) - 2023-11-27
-
-### 🐛 Bug Fixes
-
-- Fix demo example - ([021607c](https://github.com/vemonet/nanopub-rs/commit/021607c784dcd573570dcee6f3d8ad967be11bfd))
-- Fix KeyPair import in demo - ([0e48f56](https://github.com/vemonet/nanopub-rs/commit/0e48f564268681a71889014cfb5da86a655a4864))
-- Fix wasm init for pub intro - ([2501c4b](https://github.com/vemonet/nanopub-rs/commit/2501c4b0dcb45bf005c3654dc97199427ac81d62))
-- Fix demo intro pub - ([7a8b177](https://github.com/vemonet/nanopub-rs/commit/7a8b177b4631e7b3c32668a38edd65b0b908bd9c))
-
-## [0.0.11](https://github.com/vemonet/nanopub-rs/compare/v0.0.10..v0.0.11) - 2023-11-27
+## [0.0.15](https://github.com/Nanopublication/nanopub-rs/compare/v0.0.14..v0.0.15) - 2023-11-29
 
 ### 🐛 Bug Fixes
 
-- Fix demo - ([f933d78](https://github.com/vemonet/nanopub-rs/commit/f933d780e34ed3fbcdc83096f84d869770f84bef))
+- Fix orcid init - ([8c72842](https://github.com/Nanopublication/nanopub-rs/commit/8c72842f03ae06f3fde2914184e99f2983fefcda))
+- Fix main np server URL - ([229cde6](https://github.com/Nanopublication/nanopub-rs/commit/229cde6a751c887bfa411070ff4bcd7b894e00a9))
+- Fix tests - ([e2b2866](https://github.com/Nanopublication/nanopub-rs/commit/e2b2866ea16f49ff6b1109f420070e00e75c49f5))
 
-## [0.0.10](https://github.com/vemonet/nanopub-rs/compare/v0.0.9..v0.0.10) - 2023-11-24
-
-### 🐛 Bug Fixes
-
-- Fix workflow upload - ([3df9d75](https://github.com/vemonet/nanopub-rs/commit/3df9d759c832f36cabea02dadfb03710e96e5d05))
-- Fix docs - ([e7b6855](https://github.com/vemonet/nanopub-rs/commit/e7b6855bf887e4a74539ae58e214b537903f332d))
-- Fix - ([5ab51c1](https://github.com/vemonet/nanopub-rs/commit/5ab51c1d2637ee96f38913ed0d3b67119937fa48))
-
-## [0.0.9](https://github.com/vemonet/nanopub-rs/compare/v0.0.8..v0.0.9) - 2023-11-21
-
-## [0.0.8](https://github.com/vemonet/nanopub-rs/compare/v0.0.7..v0.0.8) - 2023-11-21
+## [0.0.14](https://github.com/Nanopublication/nanopub-rs/compare/v0.0.13..v0.0.14) - 2023-11-29
 
 ### 🐛 Bug Fixes
 
-- Fix binary install script - ([a07b07a](https://github.com/vemonet/nanopub-rs/commit/a07b07a04580ff5b64b9726a188e6ce33abb18d1))
-- Fix dep - ([c9f9db0](https://github.com/vemonet/nanopub-rs/commit/c9f9db05dbe38f40b5cce1d538f51450cf24e124))
-- Fix dep - ([a112208](https://github.com/vemonet/nanopub-rs/commit/a11220875c314dc13055f44fed94ee5901792e22))
+- Fix tests - ([6c2feb8](https://github.com/Nanopublication/nanopub-rs/commit/6c2feb8818bb8db1edc5da80d01540011576f8b2))
 
-## [0.0.7](https://github.com/vemonet/nanopub-rs/compare/v0.0.6..v0.0.7) - 2023-11-20
+## [0.0.13](https://github.com/Nanopublication/nanopub-rs/compare/v0.0.12..v0.0.13) - 2023-11-27
 
-### 🐛 Bug Fixes
-
-- Fix js pkg license - ([fc6e4c0](https://github.com/vemonet/nanopub-rs/commit/fc6e4c0977788d4d69870049d1fa8e0429486d7e))
-- Fix js docs - ([2bcf5f5](https://github.com/vemonet/nanopub-rs/commit/2bcf5f54525e6788df445637cd54f68c1e15ce4a))
-
-## [0.0.6](https://github.com/vemonet/nanopub-rs/compare/v0.0.5..v0.0.6) - 2023-11-20
+## [0.0.12](https://github.com/Nanopublication/nanopub-rs/compare/v0.0.11..v0.0.12) - 2023-11-27
 
 ### 🐛 Bug Fixes
 
-- Fix npm publish bump 0.0.6 - ([3d3a0e5](https://github.com/vemonet/nanopub-rs/commit/3d3a0e59cae8b91f374adfa8fd1999fcf01cd8f8))
+- Fix demo example - ([021607c](https://github.com/Nanopublication/nanopub-rs/commit/021607c784dcd573570dcee6f3d8ad967be11bfd))
+- Fix KeyPair import in demo - ([0e48f56](https://github.com/Nanopublication/nanopub-rs/commit/0e48f564268681a71889014cfb5da86a655a4864))
+- Fix wasm init for pub intro - ([2501c4b](https://github.com/Nanopublication/nanopub-rs/commit/2501c4b0dcb45bf005c3654dc97199427ac81d62))
+- Fix demo intro pub - ([7a8b177](https://github.com/Nanopublication/nanopub-rs/commit/7a8b177b4631e7b3c32668a38edd65b0b908bd9c))
 
-## [0.0.5](https://github.com/vemonet/nanopub-rs/compare/v0.0.4..v0.0.5) - 2023-11-20
-
-### 🐛 Bug Fixes
-
-- Fix npm publish bump 0.0.5 - ([bcccf74](https://github.com/vemonet/nanopub-rs/commit/bcccf74e8cae1805ddb3982f2700022c7a31afee))
-
-## [0.0.4](https://github.com/vemonet/nanopub-rs/compare/v0.0.3..v0.0.4) - 2023-11-20
+## [0.0.11](https://github.com/Nanopublication/nanopub-rs/compare/v0.0.10..v0.0.11) - 2023-11-27
 
 ### 🐛 Bug Fixes
 
-- Fix codecov workflow - ([54e20eb](https://github.com/vemonet/nanopub-rs/commit/54e20eb70d365f10dcad569c3a34558a5d36fdd0))
+- Fix demo - ([f933d78](https://github.com/Nanopublication/nanopub-rs/commit/f933d780e34ed3fbcdc83096f84d869770f84bef))
 
-## [0.0.3](https://github.com/vemonet/nanopub-rs/compare/v0.0.2..v0.0.3) - 2023-11-20
-
-### 🐛 Bug Fixes
-
-- Fix bump script and bump to 0.0.3 - ([69ee8fa](https://github.com/vemonet/nanopub-rs/commit/69ee8faa0d741b99abee18b07ca5a2d7c203f5ba))
-
-## [0.0.2](https://github.com/vemonet/nanopub-rs/compare/v0.0.1..v0.0.2) - 2023-11-20
+## [0.0.10](https://github.com/Nanopublication/nanopub-rs/compare/v0.0.9..v0.0.10) - 2023-11-24
 
 ### 🐛 Bug Fixes
 
-- Fix issues with pkg versions - ([6822464](https://github.com/vemonet/nanopub-rs/commit/68224641ada479575ee4d9830d31e88e1aa90f5f))
+- Fix workflow upload - ([3df9d75](https://github.com/Nanopublication/nanopub-rs/commit/3df9d759c832f36cabea02dadfb03710e96e5d05))
+- Fix docs - ([e7b6855](https://github.com/Nanopublication/nanopub-rs/commit/e7b6855bf887e4a74539ae58e214b537903f332d))
+- Fix - ([5ab51c1](https://github.com/Nanopublication/nanopub-rs/commit/5ab51c1d2637ee96f38913ed0d3b67119937fa48))
 
-## [0.0.1](https://github.com/vemonet/nanopub-rs/tree/v0.0.1) - 2023-11-20
+## [0.0.9](https://github.com/Nanopublication/nanopub-rs/compare/v0.0.8..v0.0.9) - 2023-11-21
+
+## [0.0.8](https://github.com/Nanopublication/nanopub-rs/compare/v0.0.7..v0.0.8) - 2023-11-21
 
 ### 🐛 Bug Fixes
 
-- Fix docs - ([8e53b47](https://github.com/vemonet/nanopub-rs/commit/8e53b471fef87d1991ac3358b9e470ac34151ae6))
-- Fix doc workflow - ([5fac322](https://github.com/vemonet/nanopub-rs/commit/5fac322f5f0bbd7b81973aa2871ba7a07dd68aea))
-- Fix error msg js - ([2b244c4](https://github.com/vemonet/nanopub-rs/commit/2b244c4acc39b22c6dccea9aad37622c95dc8242))
-- Fix ref - ([05fa3b9](https://github.com/vemonet/nanopub-rs/commit/05fa3b956586251bc96e0b704e20b5863a04a262))
-- Fix ref - ([9522b91](https://github.com/vemonet/nanopub-rs/commit/9522b913eaee1159288312557895a6df80508893))
-- Fix wheel build - ([cf88924](https://github.com/vemonet/nanopub-rs/commit/cf889246563419f60b134d8d7b83a9885f334c87))
-- Fix python dev deps - ([10bb8ee](https://github.com/vemonet/nanopub-rs/commit/10bb8ee242097e0c829352089fa627e23debfded))
-- Fix python dev deps - ([7b168f9](https://github.com/vemonet/nanopub-rs/commit/7b168f9d0a086d559a272df138e6ecef894b4a97))
-- Fix workflow - ([282d923](https://github.com/vemonet/nanopub-rs/commit/282d923500016cf8559aeee5c89b7c975996a4e6))
-- Fix wheel build - ([dd9d97b](https://github.com/vemonet/nanopub-rs/commit/dd9d97ba32d3eabd4059e3901632bfeb4e9773e3))
-- Fix conf - ([53b40ca](https://github.com/vemonet/nanopub-rs/commit/53b40ca304b8f7eb16e0fa92de345d6a8438d55e))
-- Fix workflow - ([4cfaab3](https://github.com/vemonet/nanopub-rs/commit/4cfaab304d574c9524fe0f31b81082b837670364))
-- Fix workflow - ([78af5b2](https://github.com/vemonet/nanopub-rs/commit/78af5b2a105cd684832e3f7e8998a4f51491a581))
-- Fix reqwest for wasm - ([d2b7400](https://github.com/vemonet/nanopub-rs/commit/d2b74008df3e16c26a86a1c6beca71f597c267b7))
-- Fix wasm bindgen future import - ([3c214d9](https://github.com/vemonet/nanopub-rs/commit/3c214d97867fc617a8548a65078a6d7031f6ed29))
-- Fix wasm - ([2feca44](https://github.com/vemonet/nanopub-rs/commit/2feca44fa8e8554948b22be78bbc014f9fa426d8))
-- Fix profile pointer - ([dfba31c](https://github.com/vemonet/nanopub-rs/commit/dfba31cd883a9c75d18669741678d3a2ba75033d))
-- Fix workflow - ([872eca6](https://github.com/vemonet/nanopub-rs/commit/872eca6ee25879f2fe6e569d66316ec8214e2a4f))
-- Fix bench - ([3190c74](https://github.com/vemonet/nanopub-rs/commit/3190c74e2089011bb1e9b51945fd47fba452441d))
-- Fix export benchmark md - ([09c99e1](https://github.com/vemonet/nanopub-rs/commit/09c99e115774ac1b5f5bd3f6e6ab51fc7889d688))
-- Fix test - ([8473e8d](https://github.com/vemonet/nanopub-rs/commit/8473e8d08fb6817bd1b37a597b874b98a1741cc1))
-- Fix install tarpaulin - ([b8bad05](https://github.com/vemonet/nanopub-rs/commit/b8bad05dd47b5807a01fe0e5a12d568476b6c6b9))
-- Fix wasm - ([cc0e45c](https://github.com/vemonet/nanopub-rs/commit/cc0e45ca518325fd3a41a21c1b60cf74361b44b1))
-- Fix wasm - ([8ea54d1](https://github.com/vemonet/nanopub-rs/commit/8ea54d1660c15b5b5e458598434c0dcdec107787))
-- Fix wasm - ([4e375e4](https://github.com/vemonet/nanopub-rs/commit/4e375e47768607d165d494a39c9a4174d37d6940))
-- Fix sophia version - ([d623ec7](https://github.com/vemonet/nanopub-rs/commit/d623ec7ff5b37fdeef140823cad7a40a6f6c7ac3))
-- Fix version and delete lib/README.md - ([e4c0835](https://github.com/vemonet/nanopub-rs/commit/e4c08355ebcbee67e796434e798c3ece0c0ec146))
-- Fix docs outside pkg - ([21ef352](https://github.com/vemonet/nanopub-rs/commit/21ef3521c71a75ab28c556db080a7c75639bba2e))
+- Fix binary install script - ([a07b07a](https://github.com/Nanopublication/nanopub-rs/commit/a07b07a04580ff5b64b9726a188e6ce33abb18d1))
+- Fix dep - ([c9f9db0](https://github.com/Nanopublication/nanopub-rs/commit/c9f9db05dbe38f40b5cce1d538f51450cf24e124))
+- Fix dep - ([a112208](https://github.com/Nanopublication/nanopub-rs/commit/a11220875c314dc13055f44fed94ee5901792e22))
+
+## [0.0.7](https://github.com/Nanopublication/nanopub-rs/compare/v0.0.6..v0.0.7) - 2023-11-20
+
+### 🐛 Bug Fixes
+
+- Fix js pkg license - ([fc6e4c0](https://github.com/Nanopublication/nanopub-rs/commit/fc6e4c0977788d4d69870049d1fa8e0429486d7e))
+- Fix js docs - ([2bcf5f5](https://github.com/Nanopublication/nanopub-rs/commit/2bcf5f54525e6788df445637cd54f68c1e15ce4a))
+
+## [0.0.6](https://github.com/Nanopublication/nanopub-rs/compare/v0.0.5..v0.0.6) - 2023-11-20
+
+### 🐛 Bug Fixes
+
+- Fix npm publish bump 0.0.6 - ([3d3a0e5](https://github.com/Nanopublication/nanopub-rs/commit/3d3a0e59cae8b91f374adfa8fd1999fcf01cd8f8))
+
+## [0.0.5](https://github.com/Nanopublication/nanopub-rs/compare/v0.0.4..v0.0.5) - 2023-11-20
+
+### 🐛 Bug Fixes
+
+- Fix npm publish bump 0.0.5 - ([bcccf74](https://github.com/Nanopublication/nanopub-rs/commit/bcccf74e8cae1805ddb3982f2700022c7a31afee))
+
+## [0.0.4](https://github.com/Nanopublication/nanopub-rs/compare/v0.0.3..v0.0.4) - 2023-11-20
+
+### 🐛 Bug Fixes
+
+- Fix codecov workflow - ([54e20eb](https://github.com/Nanopublication/nanopub-rs/commit/54e20eb70d365f10dcad569c3a34558a5d36fdd0))
+
+## [0.0.3](https://github.com/Nanopublication/nanopub-rs/compare/v0.0.2..v0.0.3) - 2023-11-20
+
+### 🐛 Bug Fixes
+
+- Fix bump script and bump to 0.0.3 - ([69ee8fa](https://github.com/Nanopublication/nanopub-rs/commit/69ee8faa0d741b99abee18b07ca5a2d7c203f5ba))
+
+## [0.0.2](https://github.com/Nanopublication/nanopub-rs/compare/v0.0.1..v0.0.2) - 2023-11-20
+
+### 🐛 Bug Fixes
+
+- Fix issues with pkg versions - ([6822464](https://github.com/Nanopublication/nanopub-rs/commit/68224641ada479575ee4d9830d31e88e1aa90f5f))
+
+## [0.0.1](https://github.com/Nanopublication/nanopub-rs/tree/v0.0.1) - 2023-11-20
+
+### 🐛 Bug Fixes
+
+- Fix docs - ([8e53b47](https://github.com/Nanopublication/nanopub-rs/commit/8e53b471fef87d1991ac3358b9e470ac34151ae6))
+- Fix doc workflow - ([5fac322](https://github.com/Nanopublication/nanopub-rs/commit/5fac322f5f0bbd7b81973aa2871ba7a07dd68aea))
+- Fix error msg js - ([2b244c4](https://github.com/Nanopublication/nanopub-rs/commit/2b244c4acc39b22c6dccea9aad37622c95dc8242))
+- Fix ref - ([05fa3b9](https://github.com/Nanopublication/nanopub-rs/commit/05fa3b956586251bc96e0b704e20b5863a04a262))
+- Fix ref - ([9522b91](https://github.com/Nanopublication/nanopub-rs/commit/9522b913eaee1159288312557895a6df80508893))
+- Fix wheel build - ([cf88924](https://github.com/Nanopublication/nanopub-rs/commit/cf889246563419f60b134d8d7b83a9885f334c87))
+- Fix python dev deps - ([10bb8ee](https://github.com/Nanopublication/nanopub-rs/commit/10bb8ee242097e0c829352089fa627e23debfded))
+- Fix python dev deps - ([7b168f9](https://github.com/Nanopublication/nanopub-rs/commit/7b168f9d0a086d559a272df138e6ecef894b4a97))
+- Fix workflow - ([282d923](https://github.com/Nanopublication/nanopub-rs/commit/282d923500016cf8559aeee5c89b7c975996a4e6))
+- Fix wheel build - ([dd9d97b](https://github.com/Nanopublication/nanopub-rs/commit/dd9d97ba32d3eabd4059e3901632bfeb4e9773e3))
+- Fix conf - ([53b40ca](https://github.com/Nanopublication/nanopub-rs/commit/53b40ca304b8f7eb16e0fa92de345d6a8438d55e))
+- Fix workflow - ([4cfaab3](https://github.com/Nanopublication/nanopub-rs/commit/4cfaab304d574c9524fe0f31b81082b837670364))
+- Fix workflow - ([78af5b2](https://github.com/Nanopublication/nanopub-rs/commit/78af5b2a105cd684832e3f7e8998a4f51491a581))
+- Fix reqwest for wasm - ([d2b7400](https://github.com/Nanopublication/nanopub-rs/commit/d2b74008df3e16c26a86a1c6beca71f597c267b7))
+- Fix wasm bindgen future import - ([3c214d9](https://github.com/Nanopublication/nanopub-rs/commit/3c214d97867fc617a8548a65078a6d7031f6ed29))
+- Fix wasm - ([2feca44](https://github.com/Nanopublication/nanopub-rs/commit/2feca44fa8e8554948b22be78bbc014f9fa426d8))
+- Fix profile pointer - ([dfba31c](https://github.com/Nanopublication/nanopub-rs/commit/dfba31cd883a9c75d18669741678d3a2ba75033d))
+- Fix workflow - ([872eca6](https://github.com/Nanopublication/nanopub-rs/commit/872eca6ee25879f2fe6e569d66316ec8214e2a4f))
+- Fix bench - ([3190c74](https://github.com/Nanopublication/nanopub-rs/commit/3190c74e2089011bb1e9b51945fd47fba452441d))
+- Fix export benchmark md - ([09c99e1](https://github.com/Nanopublication/nanopub-rs/commit/09c99e115774ac1b5f5bd3f6e6ab51fc7889d688))
+- Fix test - ([8473e8d](https://github.com/Nanopublication/nanopub-rs/commit/8473e8d08fb6817bd1b37a597b874b98a1741cc1))
+- Fix install tarpaulin - ([b8bad05](https://github.com/Nanopublication/nanopub-rs/commit/b8bad05dd47b5807a01fe0e5a12d568476b6c6b9))
+- Fix wasm - ([cc0e45c](https://github.com/Nanopublication/nanopub-rs/commit/cc0e45ca518325fd3a41a21c1b60cf74361b44b1))
+- Fix wasm - ([8ea54d1](https://github.com/Nanopublication/nanopub-rs/commit/8ea54d1660c15b5b5e458598434c0dcdec107787))
+- Fix wasm - ([4e375e4](https://github.com/Nanopublication/nanopub-rs/commit/4e375e47768607d165d494a39c9a4174d37d6940))
+- Fix sophia version - ([d623ec7](https://github.com/Nanopublication/nanopub-rs/commit/d623ec7ff5b37fdeef140823cad7a40a6f6c7ac3))
+- Fix version and delete lib/README.md - ([e4c0835](https://github.com/Nanopublication/nanopub-rs/commit/e4c08355ebcbee67e796434e798c3ece0c0ec146))
+- Fix docs outside pkg - ([21ef352](https://github.com/Nanopublication/nanopub-rs/commit/21ef3521c71a75ab28c556db080a7c75639bba2e))
 
 ### 📚 Documentation
 
-- Doc - ([9d98002](https://github.com/vemonet/nanopub-rs/commit/9d980024c0fad3179bd7a719115283274c216c6c))
-- Docs - ([6ea7b08](https://github.com/vemonet/nanopub-rs/commit/6ea7b08337d8e344b0cc5a12ba4090ab3c77cb98))
-- Docs - ([c95bcd3](https://github.com/vemonet/nanopub-rs/commit/c95bcd381b6929a60bd99acfde361d275d3444e1))
-- Docs - ([8bd0e63](https://github.com/vemonet/nanopub-rs/commit/8bd0e63fbd238ee4267c10d90780eac54f7041eb))
+- Doc - ([9d98002](https://github.com/Nanopublication/nanopub-rs/commit/9d980024c0fad3179bd7a719115283274c216c6c))
+- Docs - ([6ea7b08](https://github.com/Nanopublication/nanopub-rs/commit/6ea7b08337d8e344b0cc5a12ba4090ab3c77cb98))
+- Docs - ([c95bcd3](https://github.com/Nanopublication/nanopub-rs/commit/c95bcd381b6929a60bd99acfde361d275d3444e1))
+- Docs - ([8bd0e63](https://github.com/Nanopublication/nanopub-rs/commit/8bd0e63fbd238ee4267c10d90780eac54f7041eb))
 
 <!-- generated by git-cliff -->
